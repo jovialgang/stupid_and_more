@@ -1,4 +1,4 @@
-let url = "http://localhost:3002";
+let url = "http://localhost:3000/json_occupied_less";
 
 let arr = [];
 let free_less = [];

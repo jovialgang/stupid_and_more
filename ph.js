@@ -1,11 +1,12 @@
 
 let url = "https://my.itmo.ru/api/sport/my_sport/schedule/available/limits";
-
-let token = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwSVliSmNVLW1wbEdBdzhFMzNSNkNKTUdWa3hZdUQ2eUItdWt3RlBJOXV3In0.eyJleHAiOjE2NjY0NDYxMjAsImlhdCI6MTY2NjQ0NDMyMCwiYXV0aF90aW1lIjoxNjYwMDM1ODA2LCJqdGkiOiIxZmM2NWQ1Ny1iY2IzLTQ4MmMtOGMwNC0wNzY4YjM3NTRmZWUiLCJpc3MiOiJodHRwczovL2lkLml0bW8ucnUvYXV0aC9yZWFsbXMvaXRtbyIsImF1ZCI6InlhbmRleCIsInN1YiI6ImFlOTI4NzdiLTc4NzktNDQ4Ni1hYjE5LTdjNjM1MmRhOTQ5ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6InN0dWRlbnQtcGVyc29uYWwtY2FiaW5ldCIsInNlc3Npb25fc3RhdGUiOiJiOTllMmZhOC1kZjlmLTQ3MmMtOWFiZC0wMjFmOTg5OThhNDAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9teS5pdG1vLnN1IiwiaHR0cHM6Ly9teS5pdG1vLnJ1IiwiaHR0cHM6Ly9lbWJlZC5pZm1vLnJ1IiwiaHR0cHM6Ly9pc3UuaWZtby5ydSJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsieWFuZGV4Ijp7InJvbGVzIjpbImVkaXQ6YWNjb3VudCJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZWR1IHdvcmsiLCJzaWQiOiJiOTllMmZhOC1kZjlmLTQ3MmMtOWFiZC0wMjFmOTg5OThhNDAiLCJpc3UiOjMzMzQxMiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZWdvcmpvdmlhbCJ9.c9vS8FRe8sfe36CSJh_DHRmdW10xBRTUkUs_KqV0jd1uMpSAxKbo2t00DbOmTq7OjwEROo-PbrE34PdHpIS-IigBzFgVA47tKUIEdZbkt8gWa-6plq-OrgfdF-a5xS8EWmTCj02UcAgL7Bd41kp0kwIHtMEMhKKMZ7RzUSkDwBYLL8axKdiQGd8nhhMVjF9EnPxOuLFqiwkniINFqYW0r_CaZo0rQgLOIIkcO_j5gCDXKEQWJqViOIGR77OjQ7wJZenDK5HFJ7igId5OmFzadlmrefGQX9g6j8dr1a3J8GmR3Nbftbzb8nA01TVtueVNOzgykUyf6gW80D3ibIU7wQ"
+process.env.TOKEN = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwSVliSmNVLW1wbEdBdzhFMzNSNkNKTUdWa3hZdUQ2eUItdWt3RlBJOXV3In0.eyJleHAiOjE2Njc4MjM0OTAsImlhdCI6MTY2NzgyMTY5MCwiYXV0aF90aW1lIjoxNjY3ODIxNjg5LCJqdGkiOiJhMzY5ZDhiNi05ZDRkLTRlOGItOWQ3ZC1iYTU0OGU3ZDU4MzMiLCJpc3MiOiJodHRwczovL2lkLml0bW8ucnUvYXV0aC9yZWFsbXMvaXRtbyIsImF1ZCI6InlhbmRleCIsInN1YiI6ImFlOTI4NzdiLTc4NzktNDQ4Ni1hYjE5LTdjNjM1MmRhOTQ5ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6InN0dWRlbnQtcGVyc29uYWwtY2FiaW5ldCIsInNlc3Npb25fc3RhdGUiOiI2NWU1NWI2ZC1kMGRkLTQ1YjktOTlhMC04MWE5NGU1YzQ4NzYiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9teS5pdG1vLnN1IiwiaHR0cHM6Ly9teS5pdG1vLnJ1IiwiaHR0cHM6Ly9lbWJlZC5pZm1vLnJ1IiwiaHR0cHM6Ly9pc3UuaWZtby5ydSJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsieWFuZGV4Ijp7InJvbGVzIjpbImVkaXQ6YWNjb3VudCJdfSwic3R1ZGVudC1wZXJzb25hbC1jYWJpbmV0Ijp7InJvbGVzIjpbImFjY2VzcyJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZWR1IHdvcmsiLCJzaWQiOiI2NWU1NWI2ZC1kMGRkLTQ1YjktOTlhMC04MWE5NGU1YzQ4NzYiLCJpc3UiOjMzMzQxMiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZWdvcmpvdmlhbCJ9.dhD5t4lbyqejJLZ2mHZAwSEw-cweVLPbsf270YHPb2ByUKGieAZviGlWZ45hDVpLtjhM5Cu019L8sZPjX5jHoNTy5PHgN8Bbat3UNKM43sQUMGceq5RQZYjai98_uRwTZr_0CtKuS1SfgS41u5WC-ae6TPXnBHsRTBMq7hgmxiiw-rhSCTeVVNYFozGF4Cmirc-_mPd3_D0UtqSLLXF8M20RYPUb051xYiHzqqVu3NALZsj5R3ISoA7weK0MMbIa_dBVekVMSMMrLdV6tm8k11-YpVMC82GaFebX57lSUbrnc2zQmgqWlmCPSvQyolmhtvoIHGLYpeWW2mVgbw912Q"
+let token = process.env.TOKEN;
 let arr = [];
 let free_less = [];
 let occupied_less = [];
 
+// console.log(process.env)
 
 
 fetch(url,{
@@ -38,30 +39,25 @@ fetch(url,{
         let json_free_less = JSON.stringify(free_less)
 
 
-
-
-
-
-        const http1 = require("http");
-        http1.createServer(function(request,response){
+        const http = require("http");
+        http.createServer(function(request,response){
             // console.log()
-            response.end(json_arrary)
-        }).listen(3001, "127.0.0.1",()=>{
+            // response.end(json_arrary)
+            switch (request.url){
+                case "/json_arrary":
+                    response.end(json_arrary)
+                    break
+                case "/json_occupied_less":
+                    response.end(json_occupied_less)
+                    break
+                case "/json_free_less":
+                    response.end(json_free_less)
+                    break
+            }
+
+        }).listen(3000, "127.0.0.1",()=>{
             console.log("Сервер начал прослушивание запросов");
         });
 
-        const http2 = require("http");
-        http2.createServer(function(request,response){
-            // console.log()
-            response.end(json_occupied_less)
-        }).listen(3002, "127.0.0.1",()=>{
-        });
-
-        const http3 = require("http");
-        http3.createServer(function(request,response){
-            // console.log()
-            response.end(json_free_less)
-        }).listen(3003, "127.0.0.1",()=>{
-        });
     })
 
